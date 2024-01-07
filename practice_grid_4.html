@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice_grid_1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Calibri, sans-serif;
+        }
+        #container {
+            width: 60%;
+            height:700px;
+            background-color: white;
+            display: grid;
+            margin: 0 auto;
+            grid-template-areas:  'header header header header'
+                                  'nav article article  ads'
+                                  'footer footer footer  footer'
+
+         ;
+
+            gap: 21px;
+        }
+
+        .style {
+            padding: 29px;
+            background-color: rgb(255, 193, 7);
+            color: white;
+            font-size: 43px;
+            justify-content: space-around;
+            display: flex;
+            flex-direction: row-reverse;
+            align-content: stretch;
+            align-items: center;
+        }
+
+
+
+        .style:nth-child(1) {
+            grid-area: header;
+            min-height: 142px;
+        }
+
+        .style:nth-child(2) {
+            grid-area: ads;
+
+        }
+
+        .style:nth-child(3) {
+            grid-area: nav;
+min-height:549px;
+        width: 353px}
+
+        .style:nth-child(4) {
+            grid-area: article;
+            min-height: 200px;
+            min-width: 134px;
+            margin: 0 0 0 -193px;
+            background-color: gray;
+        }
+
+
+        .style:nth-child(5) {
+            grid-area: footer;
+            min-height: 131px;
+        }
+        .style:nth-child(odd){
+            background-color: royalblue;
+        }
+        .style:nth-child(3),.style:nth-child(2){
+            background-color: cornflowerblue;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="style">Holy Grail Layout</div>
+    <div class="style">Sidebar</div>
+    <div class="style">Nav</div>
+    <div class="style">Main Content</div>
+    <div class="style">Footer</div>
+</div>
+</body>
+</html>

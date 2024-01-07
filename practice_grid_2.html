@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice_grid_1</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Calibri, sans-serif;
+        }
+        #container {
+            width: 60%;
+            height:700px;
+            background-color: white;
+            display: grid;
+            margin: 0 auto;
+            grid-template-areas:  'header header header ads'
+                                  'nav article article article '
+                                  'nav article article article '
+                                  'nav article article article '
+                                  'nav footer footer footer '
+
+         ;
+
+            gap: 15px;
+        }
+
+        .style {
+            padding: 29px;
+            background-color:#2ecc71;
+            color: black;
+            font-size: 30px;
+            justify-content: flex-start;
+            flex-direction: row;
+            align-content: stretch;
+            align-items: flex-start;
+            display: flex;
+        }
+
+
+        .style:nth-child(1) {
+            grid-area: header;
+            min-height: 147px;
+            min-width: 900px;
+        }
+
+        .style:nth-child(2) {
+            grid-area: ads;
+            width: 99%;
+        }
+
+        .style:nth-child(3) {
+            grid-area: nav;
+min-height:664px;        }
+
+        .style:nth-child(4) {
+            grid-area: article;
+            min-height: 456px;
+            min-width: 433px;
+        }
+
+        .style:nth-child(5) {
+            grid-area: footer;
+            min-height: 111px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="style">Header</div>
+    <div class="style">Ads</div>
+    <div class="style">Nav</div>
+    <div class="style">Article</div>
+    <div class="style">Footer</div>
+</div>
+</body>
+</html>

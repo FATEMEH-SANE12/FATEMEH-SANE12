@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice_grid3</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        #container {
+            width: 51%;
+            background-color: white;
+            margin: 60px auto;
+            border-radius: 6px;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(3, auto);
+            gap: -3px;
+
+        }
+
+        .style2 {
+            min-height: 200px;
+            background-color: #B53471;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-family: Calibri, sans-serif;
+            color: white;
+            border-radius: 6px;
+            margin: 5px;
+
+
+        }
+
+        .style2:nth-child(1) {
+            grid-row-start: 1;
+            grid-row-end: span 3;
+            background-color: #006266;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="container">
+    <div class="style2">1</div>
+    <div class="style2">2</div>
+    <div class="style2">3</div>
+    <div class="style2">4</div>
+    <div class="style2">5</div>
+    <div class="style2">6</div>
+    <div class="style2">7</div>
+</div>
+</body>
+</html>
